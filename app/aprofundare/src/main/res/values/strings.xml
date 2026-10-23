@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">aprofundare</string>
+    <string name="adauga_laptop">Adauga laptop</string>
+    <string name="adauga_un_laptop">Adauga un laptop</string>
+    <string name="marca">Marca</string>
+</resources>
