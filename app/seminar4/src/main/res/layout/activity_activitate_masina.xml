@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivitateMasina">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/adauga_o_masina"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/marca" />
+    <EditText
+        android:id="@+id/etMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ex_dacia"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/an_fabrica_ie" />
+
+    <EditText
+        android:id="@+id/etAn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ex_2020"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pre_eur" />
+
+    <EditText
+        android:id="@+id/etPret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ex_12500_50"
+        android:inputType="numberDecimal" />
+
+    <Switch
+        android:id="@+id/swElectrica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/este_electric"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_caroserie" />
+
+    <Spinner
+        android:id="@+id/spCaroserie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tipuri_caroserie"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trac_iune" />
+
+    <RadioGroup
+        android:id="@+id/rgTractiune"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbFata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fa" />
+        <RadioButton
+            android:id="@+id/rbSpate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spate" />
+        <RadioButton
+            android:id="@+id/rb4x4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4x4" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating" />
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+    <CheckBox
+        android:id="@+id/cbConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_c_datele_sunt_corecte" />
+
+    <Button
+        android:id="@+id/btnSalveaza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salveaz" />
+
+</LinearLayout>

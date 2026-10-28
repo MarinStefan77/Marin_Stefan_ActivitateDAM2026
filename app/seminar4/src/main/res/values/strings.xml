@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Seminar4</string>
+    <string name="apasa">apasa</string>
+    <string name="introduceti_numele">Introduceti numele</string>
+    <string name="esti_student">Esti student?</string>
+    <string name="vezi_lista">Vezi lista</string>
+    <string name="adaug_ma_in">Adaugă mașină</string>
+    <string name="adauga_o_masina">Adauga o masina</string>
+    <string name="marca">Marca</string>
+    <string name="ex_dacia">ex: Dacia</string>
+    <string name="an_fabrica_ie">An fabricație</string>
+    <string name="ex_2020">ex: 2020</string>
+    <string name="pre_eur">Preț (EUR)</string>
+    <string name="ex_12500_50">ex: 12500.50</string>
+    <string name="este_electric">Este electrică</string>
+    <string name="tip_caroserie">Tip caroserie</string>
+    <string name="trac_iune">Tracțiune</string>
+    <string name="rating">Rating</string>
+    <string name="confirm_c_datele_sunt_corecte">Confirm că datele sunt corecte</string>
+    <string name="salveaz">Salvează</string>
+    <string name="fa">Față</string>
+    <string name="spate">Spate</string>
+    <string name="_4x4">4x4</string>
+    <string name="adaug_o_ma_in_ai_design">Adaugă o mașină (AI Design)</string>
+    <string name="marca_ma_inii">Marca mașinii</string>
+
+    <string-array name="tipuri_caroserie">
+        <item>Sedan</item>
+        <item>SUV</item>
+        <item>Hatchback</item>
+        <item>Break</item>
+        <item>Coupe</item>
+    </string-array>
+</resources>
+
