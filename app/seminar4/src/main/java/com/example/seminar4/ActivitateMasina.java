@@ -1,9 +1,9 @@
 package com.example.seminar4;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -21,12 +21,12 @@ import androidx.core.view.WindowInsetsCompat;
 public class ActivitateMasina extends AppCompatActivity {
 
     private EditText etMarca, etAn, etPret;
-    @SuppressLint("UseSwitchCompatOrMaterialCode")
     private Switch swElectrica;
     private Spinner spCaroserie;
-    private RadioButton  rbSpate, rb4x4;
+    private RadioButton rbFata, rbSpate, rb4x4;
     private RatingBar rbRating;
     private CheckBox cbConfirm;
+    private Button btnSalveaza;
 
 
     @Override
@@ -45,10 +45,13 @@ public class ActivitateMasina extends AppCompatActivity {
         etPret = findViewById(R.id.etPret);
         swElectrica = findViewById(R.id.swElectrica);
         spCaroserie = findViewById(R.id.spCaroserie);
+        rbFata = findViewById(R.id.rbFata);
         rbSpate = findViewById(R.id.rbSpate);
         rb4x4 = findViewById(R.id.rb4x4);
         rbRating = findViewById(R.id.rbRating);
         cbConfirm = findViewById(R.id.cbConfirm);
+        btnSalveaza = findViewById(R.id.btnSalveaza);
+        btnSalveaza.setOnClickListener(v -> trimiteDatele(v));
 
     }
 

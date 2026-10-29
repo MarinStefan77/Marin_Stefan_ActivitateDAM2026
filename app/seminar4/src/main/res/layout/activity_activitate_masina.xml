@@ -83,7 +83,6 @@
             android:id="@+id/rbFata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/fa" />
         <RadioButton
             android:id="@+id/rbSpate"
@@ -119,7 +118,6 @@
         android:id="@+id/btnSalveaza"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="trimiteDatele"
         android:text="@string/salveaz" />
 
 </LinearLayout>

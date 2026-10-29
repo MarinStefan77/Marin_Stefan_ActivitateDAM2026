@@ -12,14 +12,17 @@
         android:id="@+id/btnAdauga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="deschideAdaugare"
         android:text="@string/adaug_ma_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
+
     <Button
-        android:id="@+id/btnAdaugaAI"
+        android:id="@+id/btnLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="deschideAdaugareAI"
-        android:text="@string/adaug_o_ma_in_ai_design" />
+        android:text="@string/vezi_lista" />
 
 </LinearLayout>

@@ -1,7 +1,5 @@
 package com.example.seminar4;
 
-import androidx.annotation.NonNull;
-
 import java.io.Serializable;
 
 public class Masina implements Serializable {
