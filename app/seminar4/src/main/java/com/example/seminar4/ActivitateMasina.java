@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
+import androidx.core.os.BundleCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
@@ -27,6 +28,7 @@ public class ActivitateMasina extends AppCompatActivity {
     private RatingBar rbRating;
     private CheckBox cbConfirm;
     private Button btnSalveaza;
+    private int pozitie = -1;
 
 
     @Override
@@ -53,6 +55,39 @@ public class ActivitateMasina extends AppCompatActivity {
         btnSalveaza = findViewById(R.id.btnSalveaza);
         btnSalveaza.setOnClickListener(v -> trimiteDatele(v));
 
+        Bundle primit = getIntent().getExtras();
+        if (primit != null) {
+            Masina selectata = BundleCompat.getParcelable(primit, "masina_selectata", Masina.class);
+            if (selectata != null) {
+                pozitie = primit.getInt("pozitie", -1);
+                completeazaCampurile(selectata);
+            }
+        }
+    }
+
+    private void completeazaCampurile(Masina masina) {
+        etMarca.setText(masina.getMarca());
+        etAn.setText(String.valueOf(masina.getAnFabricatie()));
+        etPret.setText(String.valueOf(masina.getPret()));
+        swElectrica.setChecked(masina.isEsteElectrica());
+
+        String[] caroserii = getResources().getStringArray(R.array.tipuri_caroserie);
+        for (int i = 0; i < caroserii.length; i++) {
+            if (caroserii[i].equals(masina.getTipCaroserie())) {
+                spCaroserie.setSelection(i);
+                break;
+            }
+        }
+
+        if ("Spate".equals(masina.getTractiune())) {
+            rbSpate.setChecked(true);
+        } else if ("4x4".equals(masina.getTractiune())) {
+            rb4x4.setChecked(true);
+        } else {
+            rbFata.setChecked(true);
+        }
+
+        rbRating.setRating(masina.getRating());
     }
 
 
@@ -89,7 +124,8 @@ public class ActivitateMasina extends AppCompatActivity {
         Masina masinaCreata = new Masina(marca, an, pret, electrica, caroserie, tractiune, rating);
 
         Bundle bundle = new Bundle();
-        bundle.putSerializable("cheie_masina", masinaCreata);
+        bundle.putParcelable("cheie_masina", masinaCreata);
+        bundle.putInt("pozitie", pozitie);
 
         Intent intentReturn = new Intent();
         intentReturn.putExtras(bundle);

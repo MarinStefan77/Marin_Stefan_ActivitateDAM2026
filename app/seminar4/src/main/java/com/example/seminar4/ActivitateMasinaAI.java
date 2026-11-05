@@ -85,7 +85,7 @@ public class ActivitateMasinaAI extends AppCompatActivity {
         Masina masinaCreata = new Masina(marca, an, pret, electrica, caroserie, tractiune, rating);
 
         Bundle bundle = new Bundle();
-        bundle.putSerializable("cheie_masina", masinaCreata);
+        bundle.putParcelable("cheie_masina", masinaCreata);
 
         Intent intentReturn = new Intent();
         intentReturn.putExtras(bundle);

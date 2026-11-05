@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
+import androidx.core.os.BundleCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     public void deschideLista(View view) {
         Intent it = new Intent(this, ActivitateLista.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("lista_masini", listaMasini);
+        bundle.putParcelableArrayList("lista_masini", listaMasini);
         it.putExtras(bundle);
         startActivityForResult(it, COD_LISTA);
     }
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 1 && resultCode == RESULT_OK && data != null) {
             Bundle bundle = data.getExtras();
             if (bundle != null) {
-                Masina masinaPrimita = (Masina) bundle.getSerializable("cheie_masina");
+                Masina masinaPrimita = BundleCompat.getParcelable(bundle, "cheie_masina", Masina.class);
                 if (masinaPrimita != null) {
                     listaMasini.add(masinaPrimita);
                     Toast.makeText(this, masinaPrimita.toString(), Toast.LENGTH_LONG).show();
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == COD_LISTA && resultCode == RESULT_OK && data != null) {
             Bundle bundle = data.getExtras();
             if (bundle != null) {
-                ArrayList<Masina> listaActualizata = (ArrayList<Masina>) bundle.getSerializable("lista_masini");
+                ArrayList<Masina> listaActualizata = BundleCompat.getParcelableArrayList(bundle, "lista_masini", Masina.class);
                 if (listaActualizata != null) {
                     listaMasini = listaActualizata;
                 }
