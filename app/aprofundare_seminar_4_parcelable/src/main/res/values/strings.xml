@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">aprofundare_seminar_4_parcelable</string>
+    <string name="adaugare_smartphone">Adaugare smartphone</string>
+    <string name="adaugare">Adaugare</string>
+    <string name="model">Model</string>
+    <string name="ex_samsung_galaxy_s9">ex: Samsung Galaxy S9</string>
+    <string name="pret">Pret</string>
+    <string name="ex_2020">ex: 2020</string>
+    <string name="an_lansare">An lansare</string>
+    <string name="_1999_99">1999.99</string>
+    <string name="android">Android</string>
+    <string name="ios">IOS</string>
+    <string name="rating">Rating</string>
+    <string name="are_garantie">Are garantie</string>
+    <string name="salveaza">Salveaza</string>
+    <string name="telefoanele_adaugate">Telefoanele adaugate:</string>
+</resources>

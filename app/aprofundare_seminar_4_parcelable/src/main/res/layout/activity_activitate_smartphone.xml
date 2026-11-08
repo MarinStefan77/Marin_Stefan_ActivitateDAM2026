@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ActivitateSmartphone">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/adaugare"
+      android:textStyle="bold"
+      android:textAlignment="center"
+  />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/model"
+    />
+
+    <EditText
+        android:id="@+id/etModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ex_samsung_galaxy_s9"
+        android:inputType="text"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pret"
+        />
+
+    <EditText
+        android:id="@+id/etPret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/_1999_99"
+        android:inputType="numberDecimal"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/an_lansare"
+        />
+
+    <EditText
+        android:id="@+id/etAnLansare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ex_2020"
+        android:inputType="number"
+    />
+
+    <RadioGroup
+        android:id="@+id/rgSistemDeOperare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/android" />
+
+        <RadioButton
+            android:id="@+id/rbIOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ios" />
+  </RadioGroup>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/rating"
+  />
+
+  <RatingBar
+      android:id="@+id/rbRating"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:numStars="5"
+      android:stepSize="0.5"
+  />
+
+  <CheckBox
+      android:id="@+id/cbAreGarantie"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/are_garantie"
+  />
+
+  <Button
+      android:id="@+id/btnSalveaza"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/salveaza"
+  />
+
+</LinearLayout>
