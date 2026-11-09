@@ -59,6 +59,19 @@
         android:inputType="number"
     />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/memorie"
+    />
+
+    <Spinner
+        android:id="@+id/spMemorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/memorii"
+     />
+
     <RadioGroup
         android:id="@+id/rgSistemDeOperare"
         android:layout_width="match_parent"

@@ -14,17 +14,19 @@ public class Smartphone implements Parcelable {
     private String sistemDeOperare;
     private float rating;
     private boolean areGarantieExtinsa;
+    private String memorie;
 
     public Smartphone() {
     }
 
-    public Smartphone(String model, float pret, int anLansare, String sistemDeOperare, float rating, boolean areGarantieExtinsa) {
+    public Smartphone(String model, float pret, int anLansare, String sistemDeOperare, float rating, boolean areGarantieExtinsa, String memorie) {
         this.model = model;
         this.pret = pret;
         this.anLansare = anLansare;
         this.sistemDeOperare = sistemDeOperare;
         this.rating = rating;
         this.areGarantieExtinsa = areGarantieExtinsa;
+        this.memorie = memorie;
     }
 
     protected Smartphone(Parcel in) {
@@ -34,6 +36,7 @@ public class Smartphone implements Parcelable {
         sistemDeOperare = in.readString();
         rating = in.readFloat();
         areGarantieExtinsa = in.readByte() != 0;
+        memorie = in.readString();
     }
 
     @Override
@@ -44,6 +47,7 @@ public class Smartphone implements Parcelable {
         dest.writeString(sistemDeOperare);
         dest.writeFloat(rating);
         dest.writeByte((byte) (areGarantieExtinsa ? 1 : 0));
+        dest.writeString(memorie);
     }
 
     @Override
@@ -111,15 +115,11 @@ public class Smartphone implements Parcelable {
         this.areGarantieExtinsa = areGarantieExtinsa;
     }
 
-    @NonNull
-    @Override
-    public String toString() {
-        return
-                "model='" + model + '\'' +
-                ", pret=" + pret +
-                ", anLansare=" + anLansare +
-                ", sistemDeOperare='" + sistemDeOperare + '\'' +
-                ", rating=" + rating +
-                ", areGarantieExtinsa=" + areGarantieExtinsa;
+    public String getMemorie() {
+        return memorie;
+    }
+
+    public void setMemorie(String memorie) {
+        this.memorie = memorie;
     }
 }

@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RatingBar;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,7 +17,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import kotlin.TuplesKt;
 
 public class ActivitateSmartphone extends AppCompatActivity {
 
@@ -27,6 +27,7 @@ public class ActivitateSmartphone extends AppCompatActivity {
     private RadioButton rbIOS;
     private RatingBar rbRating;
     private CheckBox cbAreGarantieExtinsa;
+    private Spinner spMemorie;
     private Button btnSalveaza;
 
     @Override
@@ -47,12 +48,15 @@ public class ActivitateSmartphone extends AppCompatActivity {
         rbIOS=findViewById(R.id.rbIOS);
         rbRating=findViewById(R.id.rbRating);
         cbAreGarantieExtinsa=findViewById(R.id.cbAreGarantie);
+        spMemorie=findViewById(R.id.spMemorie);
         btnSalveaza=findViewById(R.id.btnSalveaza);
 
         btnSalveaza.setOnClickListener(v->{
             String model=etModel.getText().toString();
             float pret=Float.parseFloat(etPret.getText().toString());
             int anLansare=Integer.parseInt(etAnLansare.getText().toString());
+
+            String memorieSelectata=spMemorie.getSelectedItem().toString();
 
             String sistem="";
             if(rbAndroid.isChecked())
@@ -71,7 +75,7 @@ public class ActivitateSmartphone extends AppCompatActivity {
             float rating=rbRating.getRating();
             boolean areGarantie=cbAreGarantieExtinsa.isChecked();
 
-            Smartphone telefon=new Smartphone(model,pret,anLansare,sistem,rating,areGarantie);
+            Smartphone telefon=new Smartphone(model,pret,anLansare,sistem,rating,areGarantie,memorieSelectata);
 
             Bundle bundle=new Bundle();
             bundle.putParcelable("telefon",telefon);
