@@ -14,8 +14,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+    private ArrayList<Smartphone> telefoane=new ArrayList<>();
     private Button btnDeschidereAdaugare;
+    private Button btnDeschidereLista;
     private TextView tvRezultat;
 
     @Override
@@ -30,11 +34,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnDeschidereAdaugare=findViewById(R.id.btnDeschidereAdaugare);
+        btnDeschidereLista=findViewById(R.id.btnDeschidereLista);
         tvRezultat=findViewById(R.id.tvRezultat);
         btnDeschidereAdaugare.setOnClickListener(v -> {
             Intent it=new Intent(this,ActivitateSmartphone.class);
             startActivityForResult(it,1);
         }) ;
+
+        btnDeschidereLista.setOnClickListener(v->{
+            Intent it=new Intent(this,ActivitateLista.class);
+            Bundle bundleLista=new Bundle();
+            bundleLista.putParcelableArrayList("lista_telefoane",telefoane);
+            it.putExtras(bundleLista);
+            startActivity(it);
+        });
+
     }
 
     @Override
@@ -48,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 Smartphone telefonPrimit=bundlePrimit.getParcelable("telefon");
 
                  if(telefonPrimit!=null) {
+                     telefoane.add(telefonPrimit);
                     tvRezultat.setText(telefonPrimit.toString());
                  }
             }

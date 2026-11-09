@@ -15,15 +15,29 @@
         android:text="@string/adaugare_smartphone"
     />
 
+    <Button
+        android:id="@+id/btnDeschidereLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/vezi_lista"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="24sp"
+        android:layout_marginTop="32dp"
+        android:text="@string/ultimul_telefon_adaugat"
+        />
+
     <TextView
         android:id="@+id/tvRezultat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/telefoanele_adaugate"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:padding="16dp"
         android:layout_marginTop="24dp"
-
     />
 
 

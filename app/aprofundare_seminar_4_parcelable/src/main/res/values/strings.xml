@@ -13,10 +13,11 @@
     <string name="rating">Rating</string>
     <string name="are_garantie">Are garantie</string>
     <string name="salveaza">Salveaza</string>
-    <string name="telefoanele_adaugate">Telefoanele adaugate:</string>
     <string name="memorie">Memorie</string>
+    <string name="vezi_lista">Vezi lista</string>
+    <string name="ultimul_telefon_adaugat">Ultimul telefon adaugat:</string>
 
-    <string-array name="memorii" >
+    <string-array name="memorii">
         <item>128 GB</item>
         <item>256 GB</item>
         <item>512 GB</item>

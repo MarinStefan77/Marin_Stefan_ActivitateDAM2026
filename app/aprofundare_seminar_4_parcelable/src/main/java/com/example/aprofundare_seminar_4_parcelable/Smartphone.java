@@ -122,4 +122,16 @@ public class Smartphone implements Parcelable {
     public void setMemorie(String memorie) {
         this.memorie = memorie;
     }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return  "model='" + model + '\'' +
+                ", pret=" + pret +
+                ", anLansare=" + anLansare +
+                ", sistemDeOperare='" + sistemDeOperare + '\'' +
+                ", rating=" + rating +
+                ", areGarantieExtinsa=" + areGarantieExtinsa +
+                ", memorie='" + memorie + '\'';
+    }
 }
