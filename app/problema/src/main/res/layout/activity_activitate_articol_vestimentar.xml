@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ActivitateArticolVestimentar">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adauga"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/brand"
+        android:layout_marginTop="16dp"
+        />
+
+    <EditText
+        android:id="@+id/etBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/ex_ralph_lauren"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/culoare"
+        android:layout_marginTop="16dp"
+        />
+    <Spinner
+        android:id="@+id/spCuloare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/culori"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pret"
+        android:layout_marginTop="16dp"
+        />
+
+    <EditText
+        android:id="@+id/etPret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/ex_499_99"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/marime"
+        android:layout_marginTop="16dp"
+        />
+    <RadioGroup
+        android:id="@+id/rgMarime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/s"
+            />
+
+        <RadioButton
+            android:id="@+id/rbM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m"
+            />
+
+        <RadioButton
+            android:id="@+id/rbL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/l"
+            />
+
+        <RadioButton
+            android:id="@+id/rbXXL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/xxl"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rating"
+        android:layout_marginTop="16dp"
+        />
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stepSize="0.5"
+        android:numStars="5"
+        />
+
+    <CheckBox
+        android:id="@+id/cbEFavorit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/este_favorit"
+        />
+
+    <Button
+        android:id="@+id/btnSalveaza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salveaza_articolul_vestimentar"
+        android:layout_marginTop="24dp"
+        />
+
+</LinearLayout>

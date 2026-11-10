@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Problema</string>
+    <string name="adauga_articol">Adauga articol</string>
+    <string name="adauga">Adauga</string>
+    <string name="brand">Brand:</string>
+    <string name="ex_ralph_lauren">ex: Ralph Lauren</string>
+    <string name="culoare">Culoare:</string>
+    <string name="pret">Pret:</string>
+    <string name="ex_499_99">ex: 499.99</string>
+    <string name="marime">Marime:</string>
+    <string name="s">S</string>
+    <string name="m">M</string>
+    <string name="l">L</string>
+    <string name="xxl">XXL</string>
+    <string name="rating">Rating</string>
+    <string name="este_favorit">Este favorit</string>
+    <string name="salveaza_articolul_vestimentar">Salveaza articolul vestimentar</string>
+    <string name="ultimul_articol_vestimentar_adaugat">Ultimul articol vestimentar adaugat:</string>
+    <string name="vezi_lista">Vezi lista</string>
+    <string name="articolul_vestimentar_a_fost_sters_cu_succes">Articolul vestimentar a fost sters cu succes!</string>
+
+    <string-array name="culori">
+        <item>Rosu</item>
+        <item>Portocaliu</item>
+        <item>Galben</item>
+        <item>Violet</item>
+        <item>Albastru</item>
+        <item>Verde</item>
+    </string-array>
+</resources>
